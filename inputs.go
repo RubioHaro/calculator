@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// LeerEntrada Funcion para leer inputs
 func LeerEntrada() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
