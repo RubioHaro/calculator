@@ -16,12 +16,14 @@ func LeerEntrada() string {
 	return scanner.Text()
 }
 
-type calculadora struct {
+//Calculadora ...
+type Calculadora struct {
 	entrada   string
 	operacion string
 }
 
-func (calculadora) operar(entrada string, operador string) int {
+//Operar ...
+func (Calculadora) Operar(entrada string, operador string) int {
 
 	entradaLimpia := strings.Split(entrada, operador)
 	operador1 := convertir(entradaLimpia[0])
@@ -54,8 +56,8 @@ func convertir(entrada string) int {
 
 var separadores = [4]string{"+", "-", "*", "/"}
 
-// Obtenido de aporte en los comentarios
-func detectarOperador(operacion string) (string, error) {
+// DetectarOperador ...
+func DetectarOperador(operacion string) (string, error) {
 	var separador = ""
 	for i := 0; i < len(separadores); i++ {
 		indx := strings.Index(operacion, separadores[i])
